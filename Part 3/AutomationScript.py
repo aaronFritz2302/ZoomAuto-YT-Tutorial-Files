@@ -1,6 +1,6 @@
 from pywinauto.application import Application
 
-zoomWin = Application(backend='uia').start(r"C:\Users\never\AppData\Roaming\Zoom\bin\Zoom.exe").connect(title='Zoom',timeout=100)
+zoomWin = Application(backend='uia').start(r"C:\Users\<username>\AppData\Roaming\Zoom\bin\Zoom.exe").connect(title='Zoom',timeout=100)
 homeTab = zoomWin.Zoom.child_window(title="Home", control_type="TabItem").wrapper_object()
 homeTab.click_input()
 joinBtn = zoomWin.Zoom.child_window(title="Join", control_type="Button").wrapper_object()
