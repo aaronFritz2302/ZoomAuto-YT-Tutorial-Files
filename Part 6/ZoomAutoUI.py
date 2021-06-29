@@ -222,10 +222,10 @@ class ZoomBotUI(QMainWindow):
         
         notification.notify("ZoomAuto","Meeting has started","ZoomAuto",'./ZoomAuto.ico')
         try:
-            zoomWin = Application(backend='uia').start(r"C:\Users\never\AppData\Roaming\Zoom\bin\Zoom.exe").connect(title='Zoom',timeout=15)
+            zoomWin = Application(backend='uia').start(r"C:\Users\<username>\AppData\Roaming\Zoom\bin\Zoom.exe").connect(title='Zoom',timeout=15)
         except:
             try:
-                zoomWin = Application(backend='uia').start(r"C:\Users\never\AppData\Roaming\Zoom\bin\Zoom.exe").connect(title='Zoom - Not connected')
+                zoomWin = Application(backend='uia').start(r"C:\Users\<username>\AppData\Roaming\Zoom\bin\Zoom.exe").connect(title='Zoom - Not connected')
                 notification.notify("ZoomAuto","Bad Internet Connection","ZoomAuto",'./ZoomAuto.ico')
             except:
                 notification.notify("ZoomAuto","Zoom Not Installed, Meeting Failed","ZoomAuto",'./ZoomAuto.ico')
